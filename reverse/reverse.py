@@ -45,6 +45,28 @@ class LinkedList:
         # if we've gotten here, then the target node isn't in our list
         return False
 
+    ## PLAN
+    # split the list into a current node and the rest of the list
+    # recursively call the func for the rest of the list 
+    # combine the two sections 
+    # correct the original head
+    # base cases are if node.next_node == None or
+    # if node == None
+
     def reverse_list(self, node, prev):
         # You must use recursion for this solution
-        pass
+        if not node:
+            return 
+        if not node.next_node:
+            self.head = node
+            node.next_node = prev
+            return 
+        new = node.next_node
+        node.next_node = prev 
+        self.reverse_list(new, node)
+
+
+        
+        # return [self.reverse_list(node.next_node, prev)] + [node.value]
+        
+        
