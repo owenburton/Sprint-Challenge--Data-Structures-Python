@@ -40,6 +40,10 @@ for n in names_2:
 
 # assert set(duplicates).issubset(duplicates2)
 
+# ---------- Stretch Goal -----------
+# duplicates = set(names_1).intersection(names_2)
+# runtime: 0.0039975643157958984 seconds
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
